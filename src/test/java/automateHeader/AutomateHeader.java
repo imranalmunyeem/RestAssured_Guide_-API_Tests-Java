@@ -4,9 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import java.util.HashMap;
 import java.util.List;
-
-import org.testng.annotations.Test;
-
+import org.junit.jupiter.api.Test;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 
@@ -14,9 +12,10 @@ public class AutomateHeader {
 
 	@Test
 	public void multiple_Header() {
-		given().baseUri("https://reqres.in").header("header", "value1").header("x-key", "value2").
+		  given().baseUri("https://reqres.in").header("header", "value1").header("x-key", "value2").
 
-				when().get("/api/users?page=2").then().log().all().assertThat().statusCode(200); // validate status code
+				when().get("/api/users?page=2").then().log().all();
+		
 
 	}
 
