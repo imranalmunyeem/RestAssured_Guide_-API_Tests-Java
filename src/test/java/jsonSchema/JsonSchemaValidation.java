@@ -19,6 +19,6 @@ public class JsonSchemaValidation {
       //verify JSON Schema
       .then().assertThat()
       .body(JsonSchemaValidator.
-      matchesJsonSchema(new File("/Users/src/Parameterize/schema.json")));
+      matchesJsonSchema(new File("C:\\Users\\ialmu\\eclipse-workspace\\RestAssured_Guide_-API_Tests-Java\\src\\test\\resources\\Playloads\\schema.json")));
    }
 }
